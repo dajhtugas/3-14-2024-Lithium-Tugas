@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var side1 = prompt("Input Side 1");
+        var side2 = prompt("Input Side 2");
+        var side3 = prompt("Input Side 3");
+        var type;
+        var yn1 = isNaN(side1);
+        var yn2 = isNaN(side2);
+        var yn3 = isNaN(side3);
+        parseInt(side1);
+        parseInt(side2);
+        parseInt(side3);
+
+        if(yn1==true || yn2==true || yn3==true)
+        {
+            alert("INVALID, refresh the page to try again");
+        }
+        else{
+            determineTriangle(side1,side2,side3);
+        }
+
+        
+        function determineTriangle(side1, side2, side3){
+            
+            if(side1==side2&&side2==side3&&side1==side3){
+                alert("EQUILATERAL");
+            }
+
+            else if(side1==side2||side1==side3||side2==side3)
+            {
+                alert("ISOSCELES");
+            }
+
+            else{
+                alert("SCALENE");
+            }
+
+        }
+
+
+
+
+
+</script>
+</body>
+</html>
